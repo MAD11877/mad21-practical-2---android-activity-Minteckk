@@ -14,4 +14,3 @@ public class users {
         Followed = follow;
     }
 }
-//

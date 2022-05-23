@@ -16,9 +16,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView username = findViewById(R.id.textView);
+        username.setText(user1.Name);
+        TextView Description = findViewById(R.id.textView2);
+        Description.setText(user1.Description);
+
+        followed();
+        Button btn = findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                followed();
+            }
+        });
     }
 
-    public void followed(View view)
+    public void followed()
     {
         Button btn = findViewById(R.id.button);
         user1.Followed = !(user1.Followed);
